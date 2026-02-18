@@ -1,4 +1,5 @@
 ## Mis 100 días Azure
+https://medium.com/@vijayramaraju.kalidindi/100-days-of-azure-cloud-day-1-3438602289b0
 * [x] [Día 1: Creación de usuario Linux con shell no interactivo](./Day1.md)
 * [] [Día 2: Usuario temporal con fecha de expiración](./Day02.md)
 * [] [Día 3: Deshabilitar acceso SSH directo como root](./Day03.md)
