@@ -1,25 +1,25 @@
 # Task
 Create an SSH key pair in Azure with the following:
-* • Name: devops-kp
-* • Key type: RSA
+* Name: devops-kp
+* Key type: RSA
 
 Azure allows SSH key creation through the portal interface and also through the command line using Azure CLI. This article explains both methods with short examples.
 
-1. What is an SSH Key Pair
+# 1. What is an SSH Key Pair
 SSH keys provide secure access to servers without using passwords.
 An SSH key pair contains:
-• A private key stored securely on your workstation
-• A public key that you share with the server or cloud service
+* A private key stored securely on your workstation
+* A public key that you share with the server or cloud service
 
 Azure commonly uses SSH keys for Linux virtual machines. RSA is one of the supported cryptographic algorithms.
 
-2. Creating an SSH Key Pair using Azure Portal (UI Method)
+# 2. Creating an SSH Key Pair using Azure Portal (UI Method)
 Below is the simple and visual approach for beginners.
 
-Step 1: Open Azure Portal
+## Step 1: Open Azure Portal
 Sign in at: https://portal.azure.com
 
-Step 2: Search for “SSH keys”
+## Step 2: Search for “SSH keys”
 Use the global search bar and select SSH keys from the services list.
 
 Press enter or click to view image in full size
