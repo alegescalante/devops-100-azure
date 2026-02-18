@@ -27,7 +27,7 @@ Use the global search bar and select SSH keys from the services list.
 
 Azure Home Page
 ## Step 3: Create a New SSH Key
-Select Create.
+Select **Create**.
 
 Fill out the fields:
 * Resource Group: Select or create a new one
@@ -40,59 +40,62 @@ Fill out the fields:
 
 
 SSH Key
-Step 4: Download the Key
+## Step 4: Download the Key
 Azure creates the key and exposes the public key.
 Download the private key to your local system.
 
-Get Vijaya Rama Raju Kalidindi’s stories in your inbox
-Join Medium for free to get updates from this writer.
 
-Enter your email
-Subscribe
 You now have an RSA key pair named devops-kp stored under your Azure subscription.
 
-3. Creating an SSH Key Pair using Azure CLI (Terminal Method)
+## 3. Creating an SSH Key Pair using Azure CLI (Terminal Method)
 This method is useful when you work with automation or remote servers.
 Before starting, log in to Azure:
-
+```bash
 az login
+```
 Once authentication is complete, create the key pair with the required attributes.
 
-Create RSA SSH Key Pair
+## Create RSA SSH Key Pair
+```bash
 az sshkey create \
   --name devops-kp \
   --resource-group <your-resource-group> \
   --location <azure-region> \
   --public-key-file ~/.ssh/devops-kp.pub
+ ```
 Azure automatically saves and registers the public key.
 The private key stays in your .ssh directory.
 
-Generate RSA Key Locally (alternate method)
+## Generate RSA Key Locally (alternate method)
 If the task requires generating keys entirely on the client host:
-
+```bash
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/devops-kp
+```
 Then upload the public key manually to Azure:
-
+```bash
 az sshkey create \
   --name devops-kp \
   --resource-group <your-resource-group> \
   --public-key-file ~/.ssh/devops-kp.pub
-4. Verifying the Key
+ ```
+## 4. Verifying the Key
 To list all SSH keys stored in your Azure subscription:
-
+```bash
 az sshkey list --output table
+ ```
 You should see devops-kp listed.
 
-5. Practical Example of Usage
+## 5. Practical Example of Usage
 Once the SSH key is ready, use it when creating a Linux virtual machine.
-
+```bash
 az vm create \
   --name demo-vm \
   --resource-group <your-resource-group> \
   --image UbuntuLTS \
   --admin-username azureuser \
   --ssh-key-name devops-kp
+ ```
 The VM will allow secure access only through this key.
 
-Conclusion
+## Conclusion
 Day 1 of this journey helps build a foundational security practice. SSH keys are used across virtual machines, Kubernetes clusters, container instances, and automation pipelines. Knowing both UI and CLI methods prepares you for real projects and exam scenarios.
