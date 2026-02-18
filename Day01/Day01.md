@@ -22,20 +22,22 @@ Sign in at: https://portal.azure.com
 ## Step 2: Search for “SSH keys”
 Use the global search bar and select SSH keys from the services list.
 
-Press enter or click to view image in full size
+<img width="720" height="386" alt="image" src="https://github.com/user-attachments/assets/68040ccd-0f94-4474-9248-08363e0eedd5" />
+
 
 Azure Home Page
-Step 3: Create a New SSH Key
+## Step 3: Create a New SSH Key
 Select Create.
 
 Fill out the fields:
-• Resource Group: Select or create a new one
-• Name: devops-kp
-• Region: Choose the nearest region
-• Key type: Select RSA
-• Key size: Keep the default (2048 or 4096)
+* Resource Group: Select or create a new one
+* Name: devops-kp
+* Region: Choose the nearest region
+* Key type: Select RSA
+* Key size: Keep the default (2048 or 4096)
 
-Press enter or click to view image in full size
+<img width="720" height="394" alt="image" src="https://github.com/user-attachments/assets/1f8b8fad-7c16-489d-b003-fb92851e126b" />
+
 
 SSH Key
 Step 4: Download the Key
