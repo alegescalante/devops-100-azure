@@ -5,7 +5,7 @@ The Nautilus DevOps team is planning to migrate a portion of their infrastructur
 The requirements are:
 
 1) Use the existing resource group.
-2) The VM name must be **`xfusion-vm`**, it should be in **`West US`** region.
+2) The VM name must be **`devops-vm`**, it should be in **`West US`** region.
 3) Use the **`Ubuntu 22.04 LTS`** image for the VM.
 4) The VM size must be **Standard_B1s**.
 5) Attach a default Network Security Group (NSG) that allows inbound **`SSH (port 22)`**.
